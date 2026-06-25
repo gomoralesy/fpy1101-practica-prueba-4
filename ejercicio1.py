@@ -1,6 +1,6 @@
 estudiantes = []
 
-def registrar_estudiantes(estudiantes):
+def registrar_estudiantes():
     for i in range(3):
         print(f"INGRESO DEL ESTUDIANTE - {i+1}")
         while True:
@@ -41,8 +41,7 @@ def registrar_estudiantes(estudiantes):
                             "edad": edad,
                             "carrera": carrera}
         
-        estudiantes.append(lista_estudiante)
-        print("Estudiante registrado exitosamente.")
+        return lista_estudiante
 
 def mostrar_estudiantes(estudiantes):
     print("[LISTA DE ESTUDIANTES]")
@@ -53,5 +52,6 @@ def mostrar_estudiantes(estudiantes):
         print(f"Carrera del estudiante: {estudiante["carrera"]}")
         print("=========================================")
 
-registrar_estudiantes(estudiantes)
+for i in range(3):
+    estudiantes.append(registrar_estudiantes())
 mostrar_estudiantes(estudiantes)

@@ -15,10 +15,7 @@ def buscar_producto(productos, codigo):
 
 def mostrar_productos(producto):
     if producto:
-        print(f"Código: {producto['codigo']}")
-        print(f"Nombre: {producto['nombre']}")
-        print(f"Precio: ${producto['precio']}")
-        print(f"Stock: {producto['stock']} unidades")
+        print(producto)
     else:
         print("No se encontró el producto.")
 
